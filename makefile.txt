@@ -1,0 +1,14 @@
+output: ksparser.o kssolver.o main.o 
+	g++ parser.o solver.o main.o -o output
+
+ksparser.o: ksparser.cpp
+	g++ -c parser.cpp -o parser.o
+
+kssolver.o: kssolver.cpp
+	g++ -c solver.cpp -o solver.o
+
+main.o: main.cpp
+	g++ -c main.cpp -o main.o
+
+clean:
+	rm *.o
